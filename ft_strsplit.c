@@ -52,7 +52,7 @@ char		**ft_strsplit(const char *s, char c)
 
 	if (!s)
 		return (NULL);
-	if (!(d = (char**)malloc(sizeof(*d) * (ft_word(s, c) + 1))))
+	if (!(d = (char**)malloc(sizeof(*d) * (ft_word(s, c) + 2))))
 		return (NULL);
 	index = 0;
 	i = 0;
