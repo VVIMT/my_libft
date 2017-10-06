@@ -6,7 +6,7 @@
 /*   By: vinvimo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 19:23:12 by vinvimo           #+#    #+#             */
-/*   Updated: 2016/12/07 22:32:51 by vinvimo          ###   ########.fr       */
+/*   Updated: 2017/10/06 23:19:40 by vinvimo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (!(d = (char*)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
+	ft_bzero(d, len + 1);
 	i = 0;
 	while (i < len && s[start + i])
 	{
 		d[i] = s[start + i];
 		i++;
 	}
-	d[i] = 0;
 	return (d);
 }
