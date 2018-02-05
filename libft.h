@@ -6,7 +6,7 @@
 /*   By: vinvimo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 19:24:19 by vinvimo           #+#    #+#             */
-/*   Updated: 2017/06/16 20:12:23 by vinvimo          ###   ########.fr       */
+/*   Updated: 2018/02/06 00:16:31 by vinvimo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ char				*ft_strchr(const char *s, int c);
 void				ft_strclr(char *s);
 int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strcpy(char *dst, const char *src);
+char				*ft_strccpy(char *dst, const char *src, char *end);
 void				ft_strdel(char **as);
 char				*ft_strdup(const char *s1);
 int					ft_strequ(char const *s1, char const *s2);
@@ -49,6 +50,7 @@ char				*ft_strjoin(char const *s1, const char *s2);
 char				*ft_strjoin_char(char const *s1, char const *s2, char c);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 size_t				ft_strlen(char const *str);
+size_t				ft_strlen_c(const char *s, char *end);
 size_t				ft_strlen_w(const wchar_t *s);
 char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
@@ -93,5 +95,6 @@ void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstnew(void const *content, size_t content_size);
+int					ft_is_end(char c, char *end);
 
 #endif
